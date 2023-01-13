@@ -1,64 +1,78 @@
-/*                         GENERAL                            */
-
-body{
-    margin: 0;
-}
-main {
-}
-header{
-    background-color: red;
-}
-
-/*                         NAVBAR                            */
-nav{
-    background-color: red;
-}
-nav ul {
-    list-style-type: none;
-    padding: 0;
+/*----------------------------------------GENERAL------------------------------------*/
+* {
     margin: 0;
     text-align: center;
-    display: flex;
-}
-nav li {
-    justify-content: center;
-    flex: 1 0 auto;
-    border: 1px solid black;
-}
-nav li a  {
-    color: rgb(57, 57, 57);
-    text-decoration: none;
-    align-content: stretch;
-}
-#pageActu {
-    color: rgb(23, 179, 33);
-}
-nav li a:hover {
-    background-color: rgb(0, 89, 255);
-    color: #890C99;
-    transition: 0.5s;
-}
-section {
-    display: flex;
-    justify-content: stretch;
 }
 
-article {
-    background-color: aqua;
-    border: 1px dashed beige;
-    padding: 5px;
-    width: 300px;
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1,
+h3 {
+    margin: auto;
+}
+
+header {
+    background-color: red;
+    flex: 3 0 auto;
+    display: flex;
+}
+/*                    main                      */
+main {
+    background-color: #890C99;
+    flex: 30 0 auto;
+    display: flex;
+
 }
 
 aside {
-    background-color: yellow;
-    max-width: 300px;
-    min-width: 300px;
+    background-color: blue;
+    flex: 1 0 auto;
 }
-/*                         Footer (en en fixed avec copyright)                             */
-footer {
+
+section {
+    background-color: aqua;
+    border: 1px solid white;
+    flex: 4 0 auto;
     display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0);
+    flex-direction: column;
+}
+main section:nth-of-type(2) {
+    flex: 8 0 auto;
+}
+section h3{
+    color: beige;
+    margin: 25px auto;
+    padding: 10px 10px;
+    background-color: rgb(51, 2, 187);
+    border-radius: 40px;
+    letter-spacing: 2px;
+    
+}
+article {
+    flex: 4 0 auto;
+    background-color: #890C99;
+    display: flex;
+}
+div {
+    width: 90%;
+    height: 90%;
+    border: 3px solid rgb(72, 72, 72);
+    margin: auto;
+    position: relative;
+}
+/*                    Footer                      */
+footer {
+    background-color: black;
     color: #890C99;
+    flex: 2 0 auto;
+    display: flex;
+}
+
+footer h3 {
+    width: 100vw;
+    margin: auto;
 }

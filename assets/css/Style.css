@@ -22,20 +22,23 @@ header {
 }
 /*                    main                      */
 main {
-    background-color: #890C99;
     flex: 30 0 auto;
     display: flex;
 
 }
 
 aside {
-    background-color: blue;
+    background-color: rgb(72, 72, 72);
     flex: 1 0 auto;
+    display: flex;
+}
+aside h3{
+    margin: 0 auto auto ;
+    color: beige;
+    background: rgb(61, 133, 248);
 }
 
 section {
-    background-color: aqua;
-    border: 1px solid white;
     flex: 4 0 auto;
     display: flex;
     flex-direction: column;
@@ -52,15 +55,15 @@ section h3{
     letter-spacing: 2px;
     
 }
-article {
+
+article{
     flex: 4 0 auto;
-    background-color: #890C99;
-    display: flex;
 }
-div {
+article div {
     width: 90%;
     height: 90%;
     border: 3px solid rgb(72, 72, 72);
+    border-radius: 20px;
     margin: auto;
     position: relative;
 }
@@ -75,4 +78,100 @@ footer {
 footer h3 {
     width: 100vw;
     margin: auto;
+}
+/*-------------------------------------Exercice Carré-----------------------------------------*/
+
+#carre {
+    display: flex;
+}
+@keyframes tourne {
+    form {
+        background-color: yellow;
+        transform: rotate(0deg);
+    }
+    to {
+        background-color: red;
+        transform: rotate(450deg);
+    }
+} 
+#carre div {
+    border-width: 2px;
+    border-radius: 5px;
+    width: 140px;
+    height: 140px;
+    background-color: yellow;
+    animation-name: tourne;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-direction:alternate;
+  
+}
+/*-------------------------------------Exercice Balle-----------------------------------------*/
+
+#balle {
+    display: flex;
+    overflow: hidden;
+}
+#balle div {
+    margin-bottom: 10px;
+    width: 40px;
+    height: 140px;
+    border-radius: 0;
+    position: relative;
+
+}
+@keyframes rebond {
+    0% {
+        top: -44px;
+    }
+    20% {
+        top: 105px;
+        height: 32px;
+    }
+    23% {
+        top: 100px;
+        height: 38px;
+    }
+    35% {
+        top: 30px;
+    }
+    50% {
+        top: 105px;
+        height: 32px;        
+    }
+    52% {
+        top: 100px;
+        height: 38px;        
+    }
+    80% {
+        top: 60px;      
+    }
+    98% {
+        top: 105px;      
+        height: 32px;        
+    }
+    100% {
+        top: 100px;      
+        height: 38px;        
+    }
+    /* 100% {
+        top: -44px;
+    } */
+} 
+#balle div div {
+    position: absolute;
+    left: -1px;
+    top: -44px;
+    border-width: 2px;
+    border-radius: 100%;
+    width: 38px;
+    height: 38px;
+    background-color: #890C99;
+    animation-name: rebond;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+
 }

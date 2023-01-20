@@ -372,6 +372,7 @@ aside:hover {
     position: relative;
     
 }
+/*              animation bougeant et reduisant le carousselle             */
 @keyframes move {
     0% {
         top: -30px;
@@ -411,6 +412,7 @@ aside:hover {
     animation-duration: 10s;
     
 }
+/*             animation permetteant la rotation du carousselle            */
 @keyframes rota{
     0%{
         transform: rotateY(0deg) rotateX(0deg);
